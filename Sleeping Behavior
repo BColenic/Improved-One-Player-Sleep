@@ -1,0 +1,28 @@
+{
+ "format_version": "1.10.0",
+ "animation_controllers": {
+  "controller.animation.sleep": {
+   "initial_state": "sleep",
+   "states": {
+    "sleep": {
+     "transitions": [
+      {
+       "dead": "query.is_sleeping"
+      }
+     ],
+     "on_exit": [
+      "/title @a subtitle §7 @s Is Sleeping", 
+      "/time add 50 "
+     ]
+    },
+    "dead": {
+     "transitions": [
+      {
+       "sleep": "query.is_sleeping"
+      }
+     ]
+    }
+   }
+  }
+ }
+}
